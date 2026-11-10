@@ -18,26 +18,13 @@ Guías a Chispa, la iguana, en 3 niveles (la casa, el barrio y la calle): escane
 
 Todo funciona con teclado, mouse y pantalla táctil. Voz y música se apagan desde el HUD.
 
-## Cómo presentarlo (para el equipo)
-
-- **En vivo:** abre el juego en pantalla grande, sube el volumen (la voz de Chispa narra en español) y pide a un voluntario que juegue el nivel 1 frente al público.
-- **Feria/stand:** deja la pestaña abierta en pantalla completa (F11); cada niño juega con su nombre y se lleva el carnet impreso.
-
-## Cómo publicarlo
-
-Es un sitio estático puro (HTML/CSS/JS, sin build ni dependencias):
-
-- **Netlify Drop:** arrastra la carpeta completa a <https://app.netlify.com/drop>.
-- **GitHub Pages:** sube el repo y activa *Settings → Pages → main / root*.
-
 ## Estructura
 
 ```
 index.html            cascarón: #app, HUD, caja de Chispa, modal, overlay
-styles.css            sistema visual "sticker costeño" + impresión del carnet
-game.js               datos, escenas SVG, lógica y audio (~1100 líneas)
+styles.css            sistema visual "sticker costeño" + fuentes incrustadas + impresión
+game.js               datos, escenas SVG, lógica y audio (~1200 líneas)
 assets/chispa.svg     mascota Iguana Chispa
-assets/fonts/         Baloo 2 y Nunito (woff2, funcionan offline)
 ```
 
 ## Créditos
