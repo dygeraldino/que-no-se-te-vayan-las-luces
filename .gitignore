@@ -1,0 +1,6 @@
+# Artefactos locales
+.playwright-cli/
+
+# Herramientas de agentes IA (se reinstalan con skills-lock; no son del juego)
+.agents/
+skills-lock.json

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Escuadrón Cero Chispas · Misión Caribe</title>
+  <meta name="description" content="Juego educativo de seguridad eléctrica para niños de la campaña ¡Que no se te vayan las luces! — desarrollado por dygeraldino y JMinotta." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <!-- Baloo 2 y Nunito van incrustadas en styles.css (data: woff2): funciona
+       con doble clic en file:// y sin internet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Las pantallas se renderizan aquí con JS -->
+  </div>
+
+  <!-- HUD global (visible en niveles) -->
+  <div id="hud" class="hidden">
+    <div class="hud-left">
+      <span class="chip chip-energia" title="Puntos de Energía">⚡ <b id="hud-puntos">0</b></span>
+      <span class="chip chip-riesgos" id="hud-nivel-nombre">Nivel 1</span>
+      <span class="chip chip-riesgos">🔍 <b id="hud-riesgos">0/2</b></span>
+    </div>
+    <div class="hud-right">
+      <button class="hud-btn" id="btn-voz" title="Activar o quitar la voz de Chispa" aria-pressed="true">🗣️ Voz</button>
+      <button class="hud-btn" id="btn-musica" title="Activar o quitar la música" aria-pressed="true">🎵 Música</button>
+    </div>
+  </div>
+
+  <!-- Caja de diálogo de Chispa -->
+  <div id="chispa-box" class="hidden">
+    <img id="chispa-avatar" src="assets/chispa.svg" alt="Iguana Chispa" />
+    <div class="chispa-texto">
+      <strong>Chispa la iguana</strong>
+      <p id="chispa-msj"></p>
+    </div>
+    <button id="chispa-ok" class="btn btn-chico">¡Entendido!</button>
+  </div>
+
+  <!-- Modal genérico (preguntas de riesgo) -->
+  <div id="modal" class="hidden" role="dialog" aria-modal="true">
+    <div class="modal-tarjeta" id="modal-tarjeta"></div>
+  </div>
+
+  <!-- Overlay de transición / bajón de luz -->
+  <div id="overlay" class="hidden"><div class="overlay-contenido" id="overlay-contenido"></div></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
